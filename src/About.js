@@ -1,7 +1,7 @@
 
 import {useState} from 'react'
 import './About.css'
-function About({count , name}){
+function About({count , name , color}){
 
     const [arr , setArr] =  useState([])
     const [formValues , setFormValues] =  useState({
@@ -30,6 +30,9 @@ function About({count , name}){
     return(
         <>
         <h1 style={{color : "powderblue"}}> Value of count from props is : {count + 100}  & name is {name} </h1>
+        <div style={{width:'100px' , height : "100px" ,  backgroundColor : color == true ?  "red" : 'black'}}>
+
+        </div>
         <input onChange={handleInput}  name='name'  placeholder='Enter any name'   /> 
         <input onChange={handleInput}  name="email"  placeholder='Enter any email'   /> 
         <input onChange={handleInput}  name="mobile"  placeholder='Enter any mobile'   /> 
