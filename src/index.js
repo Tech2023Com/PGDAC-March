@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './Home';
 import About from './About';
+import PropsDrilling from './Props-Drilling';
 
 var name = "Bhanu"
 
@@ -9,8 +10,8 @@ var name = "Bhanu"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home  name={name} />
-  
+    {/* <Home  name={name} /> */}
+  <PropsDrilling/>
   </React.StrictMode>
 );
 
