@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './Home';
-import About from './About';
-import PropsDrilling from './Props-Drilling';
-import Todos from './use-memo';
+import {BrowserRouter} from 'react-router-dom'
 
-var name = "Bhanu"
+
+import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Home  name={name} /> */}
-  {/* <PropsDrilling/> */}
-  <Todos/>
+    <BrowserRouter>
+  <App/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
