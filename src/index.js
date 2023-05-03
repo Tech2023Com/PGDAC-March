@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import Home from './Home';
 import About from './About';
 import PropsDrilling from './Props-Drilling';
+import Todos from './use-memo';
 
 var name = "Bhanu"
 
@@ -11,7 +12,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Home  name={name} /> */}
-  <PropsDrilling/>
+  {/* <PropsDrilling/> */}
+  <Todos/>
   </React.StrictMode>
 );
 
