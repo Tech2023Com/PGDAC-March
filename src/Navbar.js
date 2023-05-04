@@ -56,6 +56,9 @@ return(
       <li class={`nav-item ${window.location.href.includes('p3') ? 'active' : "" }`}>
         <a style={{cursor:'pointer' , color : mode == 'light' ?  'black' : "white"}}  class="nav-link" onClick={()=> navigate('/p3')}>Page3 <span class="sr-only">(current)</span></a>
       </li>
+      <li class={`nav-item ${window.location.href.includes('rdata') ? 'active' : "" }`}>
+        <a style={{cursor:'pointer' , color : mode == 'light' ?  'black' : "white"}}  class="nav-link" onClick={()=> navigate('/rdata')}>RData <span class="sr-only">(current)</span></a>
+      </li>
       
      
     </ul>

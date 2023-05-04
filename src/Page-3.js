@@ -10,11 +10,7 @@ function Page3(){
 
 
         function handleInput(e){
-
-
             setName(e.target.value)
-
-
         }
 
 
