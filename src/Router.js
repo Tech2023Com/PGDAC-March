@@ -7,7 +7,7 @@ import UseMemo from './use-memo'
 
 
 
-function Router(){
+function Router({mode}){
 
 
 return(
@@ -15,10 +15,10 @@ return(
     <>
 
     <Routes>
-    <Route  path='/'   element={<Home/>} />
-    <Route  path='/about'   element={<About/>} />
-    <Route  path='/props-drilling'   element={<PropsDrilling/>} />
-    <Route  path='/use-memo'   element={<UseMemo/>} />
+    <Route  path='/'   element={<Home  mode={mode} />} />
+    <Route  path='/about'   element={<About mode={mode}  />} />
+    <Route  path='/props-drilling'   element={<PropsDrilling mode={mode}/>} />
+    <Route  path='/use-memo'   element={<UseMemo mode={mode}/>} />
 
 
     </Routes>

@@ -10,10 +10,6 @@ return(
     
     <>
     <Navbar/>
-    <Router>
-
-       
-    </Router>
     </>
 )
 

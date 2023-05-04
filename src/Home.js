@@ -28,7 +28,6 @@ function Home({name}){
             <button onClick={handleDark} >Dark</button>
             <button onClick={handleLight} >Light</button>
             <br></br>
-            <About  count={count}  name={name} color={color} />
         </>
     )
 
