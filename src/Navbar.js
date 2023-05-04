@@ -6,9 +6,10 @@ import { useState } from 'react'
 
 
 function Navbar(){
+  const navigate = useNavigate()
   var [mode , setMode] =  useState(localStorage.getItem('theme'))
-
-
+  
+  
 
   function handleMode(e){
     e.preventDefault()
@@ -26,7 +27,6 @@ function Navbar(){
 
   }
 
-    const navigate = useNavigate()
 
 
 
@@ -52,6 +52,9 @@ return(
       </li>
       <li class={`nav-item ${window.location.href.includes('use-memo') ? 'active' : "" }`}>
         <a style={{cursor:'pointer' , color : mode == 'light' ?  'black' : "white"}}  class="nav-link" onClick={()=> navigate('/use-memo')}>UseMemo <span class="sr-only">(current)</span></a>
+      </li>
+      <li class={`nav-item ${window.location.href.includes('p3') ? 'active' : "" }`}>
+        <a style={{cursor:'pointer' , color : mode == 'light' ?  'black' : "white"}}  class="nav-link" onClick={()=> navigate('/p3')}>Page3 <span class="sr-only">(current)</span></a>
       </li>
       
      
