@@ -7,6 +7,8 @@ import UseMemo from './use-memo'
 import Page3 from './Page-3'
 import RData from './RemoteData'
 
+import TestHome from './Home-Class'
+
 
 
 
@@ -24,6 +26,7 @@ return(
     <Route  path='/use-memo'   element={<UseMemo mode={mode}/>} />
     <Route  path='/p3'   element={<Page3 mode={mode}/>} />
     <Route  path='/rdata'   element={<RData mode={mode}/>} />
+    <Route  path='/thome'   element={<TestHome mode={mode}/>} />
     <Route  path='*'   element={<Home mode={mode}/>} />
 
 

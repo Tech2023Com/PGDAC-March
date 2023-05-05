@@ -60,6 +60,10 @@ return(
         <a style={{cursor:'pointer' , color : mode == 'light' ?  'black' : "white"}}  class="nav-link" onClick={()=> navigate('/rdata')}>RData <span class="sr-only">(current)</span></a>
       </li>
       
+      <li class={`nav-item ${window.location.href.includes('thome') ? 'active' : "" }`}>
+        <a style={{cursor:'pointer' , color : mode == 'light' ?  'black' : "white"}}  class="nav-link" onClick={()=> navigate('/thome')}>ClassComponent <span class="sr-only">(current)</span></a>
+      </li>
+      
      
     </ul>
     <form class="form-inline my-2 my-lg-0">
