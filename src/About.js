@@ -1,6 +1,8 @@
 
 import {useState} from 'react'
 import './About.css'
+
+import {toast} from 'react-toastify'
 function About({mode}){
 
     const [arr , setArr] =  useState([])
@@ -21,9 +23,27 @@ function About({mode}){
     }
 
     function onAdd(){
-        setArr([...arr , formValues])
 
-        console.log(arr)
+        if(formValues.name ==  "")
+        {
+                    toast.warn(  "Please Enter name")
+                }
+                else if(formValues.mobile == "")
+                {
+                    toast.error("Please Enter Mobile")
+                    
+                }
+                else if(formValues.email == "")
+                {
+            toast.info("Please Enter Mobile")
+
+        }
+        else{
+
+            setArr([...arr , formValues])
+            console.log(arr)
+        }
+
 
     }
 

@@ -1,5 +1,6 @@
 import {useNavigate} from 'react-router-dom'
 import Router from './Router'
+import AuthRouter from './AuthRoutes'
 import { useState } from 'react'
 
 
@@ -8,6 +9,9 @@ import { useState } from 'react'
 function Navbar(){
   const navigate = useNavigate()
   var [mode , setMode] =  useState(localStorage.getItem('theme'))
+
+  var [auth , setAuth] =  useState(false)
+
   
   
 
@@ -31,8 +35,10 @@ function Navbar(){
 
 
 return(
-
+  <>
+  {localStorage.getItem('auth') == 'bhanu@gmail.com' ?
     <>
+    
 <nav class={`navbar navbar-expand-lg navbar-light bg-${mode == 'light' ?  'light' :  'dark' }`}>
   <a style={{cursor:'pointer' , color : mode == 'light' ?  'black' : "white"}} class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,15 +76,26 @@ return(
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
       <button onClick={  (e)=> handleMode(e)} class="btn btn-outline-success my-2 my-sm-0" > {mode == 'light' ?  "Dark" : "Light" } </button>
     </form>
+    <form class="form-inline my-2 my-lg-0">
+      <button onClick={  ()=> localStorage.removeItem('auth')} class="btn btn-outline-success my-2 my-sm-0" > Logout </button>
+    </form>
   </div>
 </nav>
-<Router  mode={mode} />
-    </>
 
+
+
+<Router   />
+</>
+
+: <AuthRouter/> }
+
+</>
 )
 
 
 }
+
+
 
 
 export default Navbar
